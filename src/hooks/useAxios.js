@@ -11,6 +11,9 @@ const useAxios = (configObj) => {
     const [response, setResponse] = useState([]);
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true);
+    const [reload, setReload] = useState(0);
+
+    const refetch = () => setReload(prev => prev + 1);
 
     useEffect(() => {
         //const controller = new AbortController();
@@ -36,8 +39,8 @@ const useAxios = (configObj) => {
     // return () => controller.abort();
     return () => isMounted = false;
 
-}, [])
-return [response, loading, error]
+}, [reload]);
+return [response, error, loading, refetch]
 
 
 }
