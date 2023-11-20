@@ -19,7 +19,7 @@ body {
                 linear-gradient(dodgerblue,dodgerblue); /* first bg is on top of this */
 }
 
-.App {
+App {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
