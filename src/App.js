@@ -1,14 +1,15 @@
-import './App.css';
-import Jokes from './components/Jokes';
+import Jokes from "./components/Jokes"
+import Posts from "./components/Posts"
 
 function App() {
+
   return (
-    <main className="App">
+   <main className="App">
       <h1>useAxios Hooks</h1>
-      <Jokes/>
-      
-    </main>
-  );
+      <Jokes />
+      <Posts />
+   </main>
+  )
 }
 
 export default App
